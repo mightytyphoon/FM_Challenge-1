@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0c1b;
+    padding: 0px;
+    margin: 0px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "card-text pic";
+    background-color: #1c1938;
+    border-radius: 7px;
+    overflow: hidden;
+    max-width: 1000px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+h1{
+    font-family: 'Inter', sans-serif;
+    color: #fdfffe;
+    margin: 0px;
+    font-size: 35px;
+}
+
+h1 > strong{
+    color: #a95bd9;
+}
+
+p{
+    color: #9998ab;
+    font-family: 'Inter', sans-serif;
+    margin: 30px 0px 60px 0px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #9998ab;
+    text-transform: uppercase;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+}
+
+section > div > strong {
+    font-size: 23px;
+    color: white;
+    display: block;
+    margin-bottom: 3px;
+    text-transform: none;
+    font-family: 'Inter', sans-serif;
+}
+
+main>div:first-child{
+    padding: 60px;
+    grid-area: card-text;
+}
+
+main>div:nth-child(2){
+    background-image: url("../images/image-header-desktop.jpg");
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    position: relative;
+    grid-area: pic;
+}
+
+.layer{
+    background-color: #822db685;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body{
+        height: auto;
+        overflow: auto;
+        padding: 15px;
+    }
+    main{
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-areas: "pic"
+        "card-text";
+        max-width: calc(100% - 30px);
+    }
+    main>div:first-child{
+        padding: 40px;
+    }
+    section{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
